@@ -19,7 +19,7 @@ go version go1.19.3 darwin/amd64
 ```
 
 # Configure vscode
-- vscode_step1.png
+![alt text for screen readers](./vscode_step1.png "vscode configuration 1")
 - 1. click `Extension`
 - 2. type `Go`
 - 3. choose the 1st item and click `Install`
