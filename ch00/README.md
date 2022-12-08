@@ -37,3 +37,6 @@ go version go1.19.3 darwin/amd64
 ```
 All tools successfully installed. You are ready to Go :).
 ```
+
+- Disable `GO111MODULE`: Please refer to [here](https://dev.to/codeboten/disabling-go-modules-in-visual-studio-code-31mp)
+
