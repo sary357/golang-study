@@ -3,7 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("use if-else-if-else")
 	for i := 1; i <= 100; i++ {
 		if i%5 == 0 && i%3 == 0 {
 			fmt.Println("FizzBuzz")
