@@ -69,7 +69,11 @@ func main() {
 	}
 
 	// 2nd person
-	total_interest, percentage, e = calculate_loan(350, 1000, 10000, 12)
+	credit_num = 350
+	income = 1000
+	loan = 10000
+	period = 12
+	total_interest, percentage, e = calculate_loan(credit_num, income, loan, period)
 	fmt.Println("\n申請人 2\n----------")
 	fmt.Println("信用分數:\t", credit_num)
 	fmt.Println("收入:\t", income)
