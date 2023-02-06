@@ -17,5 +17,5 @@ func removeElement(strSlice []string, idx int) []string {
 
 func main() {
 	testSlice := []string{"Good", "Good", "Bad", "Good", "Good"}
-	fmt.Println(removeElement(testSlice, 3))
+	fmt.Println(removeElement(testSlice, 2))
 }
