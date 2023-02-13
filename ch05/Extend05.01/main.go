@@ -38,7 +38,7 @@ func main() {
 	developer.WorkWeek[Sunday] = 0
 	developer.WorkWeek[Monday] = 8
 	developer.WorkWeek[Tuesday] = 10
-	fmt.Printf("Working hours on Monday: %d.\n", developer.WorkWeek[Sunday])
+	fmt.Printf("Working hours on Monday: %d.\n", developer.WorkWeek[Monday])
 	fmt.Printf("Working hours on Tuesday: %d.\n", developer.WorkWeek[Tuesday])
 	fmt.Printf("Weekly Wage: %d\n", developer.WeekPayment())
 }
