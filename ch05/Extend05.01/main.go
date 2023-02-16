@@ -35,9 +35,9 @@ func (d Developer) WeekPayment() uint {
 func main() {
 	developer := Developer{}
 	developer.HourlyRate = 10
-	developer.WorkWeek[Sunday] = 0
-	developer.WorkWeek[Monday] = 8
-	developer.WorkWeek[Tuesday] = 10
+	developer.logHours(Sunday, 0)
+	developer.logHours(Monday, 8)
+	developer.logHours(Tuesday, 10)
 	fmt.Printf("Working hours on Monday: %d.\n", developer.WorkWeek[Monday])
 	fmt.Printf("Working hours on Tuesday: %d.\n", developer.WorkWeek[Tuesday])
 	fmt.Printf("Weekly Wage: %d\n", developer.WeekPayment())
