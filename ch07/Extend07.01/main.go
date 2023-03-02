@@ -90,12 +90,21 @@ func (d Developer) ReviewRating(reviewStandard map[string]int) float64 {
 	r := d.Review
 	for _, v := range r {
 		switch v.(type) {
-		case float32, float64, int, int32, int64:
-			//fmt.Println("------------")
+		case int:
 			intValue := v.(int)
-			//fmt.Println(float64(intValue))
-			//fmt.Println(totalRating)
 			totalRating = totalRating + float64(intValue)
+		case int32:
+			intValue := v.(int32)
+			totalRating = totalRating + float64(intValue)
+		case int64:
+			intValue := v.(int64)
+			totalRating = totalRating + float64(intValue)
+		case float32:
+			intValue := v.(float32)
+			totalRating = totalRating + float64(intValue)
+		case float64:
+			intValue := v.(float64)
+			totalRating = totalRating + (intValue)
 		case string:
 			//fmt.Println(v)
 			temp := reviewStandard[v.(string)]
