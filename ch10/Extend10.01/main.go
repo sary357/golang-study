@@ -19,8 +19,8 @@ func main() {
 	testDate := time.Date(2021, 4, 23, 16, 18, 15, 1, time.Local)
 	deadlineTime, err := deadline(testDate, "Asia/Tokyo")
 	if err == nil {
-		fmt.Println("curret time\t: " + testDate.Format("15:04:05 1/2/2006"))
-		fmt.Println("deadline\t: " + deadlineTime.Format("15:04:05 1/2/2006"))
+		fmt.Println("curret time (in Taipei time)\t: " + testDate.Format("15:04:05 1/2/2006"))
+		fmt.Println("deadline (in Tokyo time)\t: " + deadlineTime.Format("15:04:05 1/2/2006"))
 	} else {
 		fmt.Println(err)
 	}
