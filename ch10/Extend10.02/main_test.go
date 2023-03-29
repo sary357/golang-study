@@ -13,7 +13,7 @@ func TestMain(t *testing.T) {
 		start := time.Now()
 		value := Fibonacci(30)
 		if value != 832040 {
-			t.Fatal("Expected result: 832040. The value we get is: " + strconv.Itoa(value))
+			t.Fatal("Expected result: 832040. but the value we get is: " + strconv.Itoa(value))
 		}
 		end := time.Now()
 		duration := end.Sub(start)
