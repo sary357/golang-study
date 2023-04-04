@@ -54,15 +54,15 @@ func Total(c *CustomerOrder, paid bool) {
 	c.Order.Paid = paid
 }
 
+// if item name in OrderDetail contains the string "Glass" or "glass"
+// then return true
+// else return false
 func IsFragile(item OrderDetail) bool {
-	// if item name in OrderDetail contains the string "Glass" or "glass"
-	// then return true
-	// else return false
+
 	if strings.Index(item.ItemName, "Glass") >= 0 || strings.Index(item.ItemName, "glass") >= 0 {
 		return true
-	} else {
-		return false
 	}
+	return false
 }
 
 func main() {
