@@ -40,17 +40,29 @@ func AddItem(c *CustomerOrder, item OrderDetail) {
 
 func Total(c *CustomerOrder, paid bool) {
 	sum := 0
-	fragile := false
+
+	// calculate the total sum of order in OrderDetail
 	for _, i := range c.Order.OrderDetail {
 		sum += i.Price * i.Qty
-
-		if strings.Index(i.ItemName, "Glass") >= 0 {
-			fragile = true
+		if IsFragile(i) {
+			c.Order.Fragile = true
 		}
+
 	}
 	c.Order.Total = sum
-	c.Order.Fragile = fragile
+
 	c.Order.Paid = paid
+}
+
+func IsFragile(item OrderDetail) bool {
+	// if item name in OrderDetail contains the string "Glass" or "glass"
+	// then return true
+	// else return false
+	if strings.Index(item.ItemName, "Glass") >= 0 || strings.Index(item.ItemName, "glass") >= 0 {
+		return true
+	} else {
+		return false
+	}
 }
 
 func main() {
